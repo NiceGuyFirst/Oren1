@@ -6,8 +6,9 @@ pipeline {
 
 	stages {
 		stage('checkuou') (
-                    scm 	https://github.com/NiceGuyFirst/Oren1.git
+			checkout scm
 		)
+
 		stage('verify') {
 			steps {
 				sh 'checkmd5.sh'
