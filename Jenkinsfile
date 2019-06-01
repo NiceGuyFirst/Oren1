@@ -2,10 +2,12 @@ pipeline {
 	agent any
 
 	node {
-		checkout scm
 		
 
 	stages {
+		stage('checkuou') (
+                    scm 	https://github.com/NiceGuyFirst/Oren1.git
+		)
 		stage('verify') {
 			steps {
 				sh 'checkmd5.sh'
